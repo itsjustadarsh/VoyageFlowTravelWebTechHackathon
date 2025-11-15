@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>VoyageFlow - Your Travel Journey Begins</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="antialiased text-gray-900">
+    <!-- Page 1: Enhanced Registration Form -->
+    <div id="page1" class="page active">
+      <div class="gradient-bg hero-pattern min-h-screen p-4">
+        <!-- Hero Section -->
+        <div
+          class="container mx-auto px-4 py-12 text-center text-[#1a1a1a] mb-8"
+        >
+          <h1 class="text-6xl font-bold mb-4">VoyageFlow</h1>
+          <p class="text-md mb-6 font-semibold">
+            <i>"Discover Incredible India"</i>
+          </p>
+          <p class="text-xl max-w-3xl mx-auto leading-relaxed">
+            Embark on a journey through India's rich heritage, diverse cultures,
+            stunning landscapes, and vibrant cities. From the Himalayas to
+            coastal beaches, from ancient temples to modern marvels - Your
+            perfect Indian adventure awaits!
+          </p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="container mx-auto px-4 mb-12">
+          <h2 class="text-3xl font-bold text-center text-[#1a1a1a] mb-6">
+            Why Choose VoyageFlow?
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div
+              class="bg-white/90 backdrop-blur rounded-xl p-6 text-center transform hover:scale-105 transition"
+            >
+              <div class="text-5xl mb-3">🏛️</div>
+              <h3 class="text-xl font-bold text-[#1a1a1a] mb-2">
+                Rich Heritage
+              </h3>
+              <p class="text-gray-700">
+                Explore 5000+ years of history, UNESCO sites, and architectural
+                wonders
+              </p>
+            </div>
+            <div
+              class="bg-white/90 backdrop-blur rounded-xl p-6 text-center transform hover:scale-105 transition"
+            >
+              <div class="text-5xl mb-3">🍛</div>
+              <h3 class="text-xl font-bold text-[#1a1a1a] mb-2">
+                Culinary Delights
+              </h3>
+              <p class="text-gray-700">
+                Savor authentic regional cuisines from every corner of India
+              </p>
+            </div>
+            <div
+              class="bg-white/90 backdrop-blur rounded-xl p-6 text-center transform hover:scale-105 transition"
+            >
+              <div class="text-5xl mb-3">🎭</div>
+              <h3 class="text-xl font-bold text-[#1a1a1a] mb-2">
+                Cultural Diversity
+              </h3>
+              <p class="text-gray-700">
+                Experience festivals, traditions, and warm hospitality
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="flex items-center justify-center">
+          <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
+            <div class="text-center mb-8">
+              <h2 class="text-3xl font-bold text-[#1a1a1a] mb-2">
+                Start Your Journey
+              </h2>
+              <p class="text-gray-600">
+                Register now to explore incredible destinations
+              </p>
+            </div>
+
+            <form id="registrationForm" class="space-y-6" novalidate>
+              <div>
+                <label
+                  for="fullName"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="fullName"
+                  required
+                  class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none transition"
+                  placeholder="Your name"
+                />
+                <div id="nameError" class="error-message">
+                  Please enter your name
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="email"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none transition"
+                  placeholder="you@example.com"
+                />
+                <div id="emailError" class="error-message">
+                  Please enter a valid email address
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="phone"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  required
+                  maxlength="10"
+                  class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none transition"
+                  placeholder="10 digit phone"
+                />
+                <div id="phoneError" class="error-message">
+                  Phone number must be exactly 10 digits
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="pincode"
+                  class="block text-gray-700 font-semibold mb-2"
+                  >PIN Code</label
+                >
+                <input
+                  type="text"
+                  id="pincode"
+                  required
+                  maxlength="6"
+                  class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none transition"
+                  placeholder="6 digit PIN code"
+                />
+                <div id="pincodeError" class="error-message">
+                  PIN code must be exactly 6 digits
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-yellow-600 text-white py-3 rounded-lg font-semibold hover:bg-yellow-700 transition transform hover:scale-105"
+              >
+                Start Your Journey
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 2: Travel Blog -->
+    <div id="page2" class="page">
+      <div class="sticky-nav bg-white">
+        <div class="container mx-auto px-4">
+          <div class="flex items-center justify-between py-4">
+            <h2 class="text-2xl font-bold text-[#1a1a1a]">VoyageFlow</h2>
+            <nav class="flex gap-6 flex-wrap">
+              <a
+                href="#jaipur"
+                class="text-gray-700 hover:text-[#1a1a1a] font-semibold transition"
+                >Jaipur</a
+              >
+              <a
+                href="#goa"
+                class="text-gray-700 hover:text-[#1a1a1a] font-semibold transition"
+                >Goa</a
+              >
+              <a
+                href="#kerala"
+                class="text-gray-700 hover:text-[#1a1a1a] font-semibold transition"
+                >Kerala</a
+              >
+              <a
+                href="#varanasi"
+                class="text-gray-700 hover:text-[#1a1a1a] font-semibold transition"
+                >Varanasi</a
+              >
+              <a
+                href="#mumbai"
+                class="text-gray-700 hover:text-[#1a1a1a] font-semibold transition"
+                >Mumbai</a
+              >
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto px-4 py-12">
+        <!-- Jaipur -->
+        <section id="jaipur" class="mb-20">
+          <div
+            class="destination-card bg-white rounded-2xl shadow-xl overflow-hidden"
+          >
+            <div class="h-96 relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1200&h=600&fit=crop"
+                alt="Jaipur - Hawa Mahal"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="text-white p-8">
+                  <h2 class="text-6xl font-bold mb-2">🏰 Jaipur</h2>
+                  <p class="text-2xl">The Pink City</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-3xl font-bold text-gray-800 mb-4">
+                Royal Heritage of Rajasthan
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Experience the grandeur of Jaipur with its magnificent palaces
+                and forts. Visit the iconic Hawa Mahal, explore the majestic
+                Amber Fort, and wander through the City Palace. The pink-hued
+                buildings create a mesmerizing backdrop for your royal
+                adventure.
+              </p>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Don't miss the astronomical wonders at Jantar Mantar, shop for
+                traditional textiles and jewelry at Johari Bazaar, and savor
+                authentic Rajasthani cuisine including dal baati churma and
+                ghewar.
+              </p>
+              <div class="flex gap-3 flex-wrap">
+                <span
+                  class="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Heritage</span
+                >
+                <span
+                  class="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Shopping</span
+                >
+                <span
+                  class="bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Culture</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Goa -->
+        <section id="goa" class="mb-20">
+          <div
+            class="destination-card bg-white rounded-2xl shadow-xl overflow-hidden"
+          >
+            <div class="h-96 relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&h=600&fit=crop"
+                alt="Goa Beach"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="text-white p-8">
+                  <h2 class="text-6xl font-bold mb-2">🏖️ Goa</h2>
+                  <p class="text-2xl">Beach Paradise of India</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-3xl font-bold text-gray-800 mb-4">
+                Sun, Sand & Serenity
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Relax on pristine beaches from Baga to Palolem, explore
+                Portuguese heritage in Old Goa's churches, and experience the
+                vibrant nightlife. Goa offers the perfect blend of relaxation
+                and adventure with water sports, beach shacks, and stunning
+                sunsets.
+              </p>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Visit the Basilica of Bom Jesus, cruise on the Mandovi River,
+                trek to Dudhsagar Falls, and indulge in Goan seafood delicacies
+                like fish curry rice and bebinca. The laid-back vibe makes it
+                perfect for all types of travelers.
+              </p>
+              <div class="flex gap-3 flex-wrap">
+                <span
+                  class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Beaches</span
+                >
+                <span
+                  class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Adventure</span
+                >
+                <span
+                  class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Nightlife</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Kerala -->
+        <section id="kerala" class="mb-20">
+          <div
+            class="destination-card bg-white rounded-2xl shadow-xl overflow-hidden"
+          >
+            <div class="h-96 relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1200&h=600&fit=crop"
+                alt="Kerala Backwaters"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="text-white p-8">
+                  <h2 class="text-6xl font-bold mb-2">🌴 Kerala</h2>
+                  <p class="text-2xl">God's Own Country</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-3xl font-bold text-gray-800 mb-4">
+                Backwaters & Beyond
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Cruise through the tranquil backwaters of Alleppey on a
+                traditional houseboat, witness Kathakali performances, and
+                rejuvenate with authentic Ayurvedic treatments. Kerala's lush
+                landscapes include tea plantations in Munnar, wildlife in
+                Periyar, and pristine beaches in Kovalam.
+              </p>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Experience the snake boat races, visit spice plantations,
+                explore Fort Kochi's colonial charm, and savor traditional
+                Kerala sadya on a banana leaf. The state's natural beauty and
+                cultural richness create an unforgettable experience.
+              </p>
+              <div class="flex gap-3 flex-wrap">
+                <span
+                  class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Nature</span
+                >
+                <span
+                  class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Wellness</span
+                >
+                <span
+                  class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Backwaters</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Varanasi -->
+        <section id="varanasi" class="mb-20">
+          <div
+            class="destination-card bg-white rounded-2xl shadow-xl overflow-hidden"
+          >
+            <div class="h-96 relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1200&h=600&fit=crop"
+                alt="Varanasi Ghats"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="text-white p-8">
+                  <h2 class="text-6xl font-bold mb-2">🕉️ Varanasi</h2>
+                  <p class="text-2xl">The Spiritual Capital</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-3xl font-bold text-gray-800 mb-4">
+                Ancient Mysticism on the Ganges
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Witness the soul-stirring Ganga Aarti at Dashashwamedh Ghat,
+                take a sunrise boat ride on the holy Ganges, and explore ancient
+                temples and ashrams. Varanasi, one of the world's oldest living
+                cities, offers a profound spiritual experience that touches the
+                heart.
+              </p>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Visit the Kashi Vishwanath Temple, explore the narrow lanes
+                filled with silk weavers, attend classical music concerts, and
+                experience the timeless rituals that have continued for
+                thousands of years. Don't forget to try Banarasi paan and the
+                famous street food.
+              </p>
+              <div class="flex gap-3 flex-wrap">
+                <span
+                  class="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Spiritual</span
+                >
+                <span
+                  class="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Heritage</span
+                >
+                <span
+                  class="bg-orange-100 text-orange-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Culture</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mumbai -->
+        <section id="mumbai" class="mb-20">
+          <div
+            class="destination-card bg-white rounded-2xl shadow-xl overflow-hidden"
+          >
+            <div class="h-96 relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=1200&h=600&fit=crop"
+                alt="Mumbai Gateway of India"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end"
+              >
+                <div class="text-white p-8">
+                  <h2 class="text-6xl font-bold mb-2">🌆 Mumbai</h2>
+                  <p class="text-2xl">The City of Dreams</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="text-3xl font-bold text-gray-800 mb-4">
+                Bollywood & Beyond
+              </h3>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Experience the energy of India's financial and entertainment
+                capital. Visit the iconic Gateway of India, explore the UNESCO
+                World Heritage Victorian Gothic buildings, stroll along Marine
+                Drive at sunset, and immerse yourself in the vibrant culture of
+                this never-sleeping metropolis.
+              </p>
+              <p class="text-gray-600 leading-relaxed mb-4">
+                Tour Bollywood studios, visit the Elephanta Caves, shop at
+                Colaba Causeway, experience the buzz of Crawford Market, and
+                indulge in Mumbai's famous street food - vada pav, pav bhaji,
+                and bhel puri. The city's cosmopolitan spirit welcomes everyone
+                with open arms.
+              </p>
+              <div class="flex gap-3 flex-wrap">
+                <span
+                  class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Urban</span
+                >
+                <span
+                  class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Bollywood</span
+                >
+                <span
+                  class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold"
+                  >Food</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="text-center py-12">
+          <button
+            id="goToPage3Btn"
+            class="bg-yellow-600 text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-yellow-700 transition transform hover:scale-105 shadow-lg"
+          >
+            Plan Your Trip →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 3: Dynamic Price Calculator -->
+    <div id="page3" class="page">
+      <div class="gradient-bg hero-pattern min-h-screen py-12">
+        <div class="container mx-auto px-4">
+          <div class="text-center text-white mb-12">
+            <h1 class="text-5xl font-bold mb-4">Build Your Perfect Journey</h1>
+            <p class="text-xl">
+              Customize your Indian adventure with smart pricing
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-4xl mx-auto">
+            <!-- Destination Selection -->
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                📍 Select Your Destination
+              </h2>
+              <select
+                id="destinationSelect"
+                class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none transition text-lg font-semibold"
+              >
+                <option value="">Choose a destination...</option>
+                <option value="jaipur">Jaipur - The Pink City</option>
+                <option value="goa">Goa - Beach Paradise</option>
+                <option value="kerala">Kerala - God's Own Country</option>
+                <option value="varanasi">Varanasi - Spiritual Capital</option>
+                <option value="mumbai">Mumbai - City of Dreams</option>
+              </select>
+            </div>
+
+            <!-- Trip Duration -->
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                📅 Trip Duration
+              </h2>
+              <div class="flex items-center gap-4">
+                <label class="flex-1">
+                  <span class="text-gray-700 font-semibold mb-2 block"
+                    >Number of Days</span
+                  >
+                  <input
+                    type="number"
+                    id="tripDays"
+                    min="1"
+                    max="30"
+                    value="3"
+                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none transition text-lg"
+                  />
+                </label>
+                <label class="flex-1">
+                  <span class="text-gray-700 font-semibold mb-2 block"
+                    >Number of Travelers</span
+                  >
+                  <input
+                    type="number"
+                    id="travelers"
+                    min="1"
+                    max="10"
+                    value="2"
+                    class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-yellow-500 focus:outline-none transition text-lg"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <!-- Travel Class -->
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                ✈️ Travel Class
+              </h2>
+              <div class="space-y-3">
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="travelClass"
+                    value="economy"
+                    class="form-radio h-5 w-5"
+                    checked
+                  />
+                  <span class="flex-1 font-semibold">Economy Flight</span>
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="8000"
+                    >₹8,000/person</span
+                  >
+                </label>
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="travelClass"
+                    value="business"
+                    class="form-radio h-5 w-5"
+                  />
+                  <span class="flex-1 font-semibold">Business Class</span>
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="25000"
+                    >₹25,000/person</span
+                  >
+                </label>
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="travelClass"
+                    value="first"
+                    class="form-radio h-5 w-5"
+                  />
+                  <span class="flex-1 font-semibold">First Class</span>
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="50000"
+                    >₹50,000/person</span
+                  >
+                </label>
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="travelClass"
+                    value="train"
+                    class="form-radio h-5 w-5"
+                  />
+                  <span class="flex-1 font-semibold">AC Train (2-Tier)</span>
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="2500"
+                    >₹2,500/person</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <!-- Accommodation -->
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                🏨 Accommodation
+              </h2>
+              <div class="space-y-3">
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="accommodation"
+                    value="budget"
+                    class="form-radio h-5 w-5"
+                    checked
+                  />
+                  <span class="flex-1 font-semibold"
+                    >Budget Hotel (3-Star)</span
+                  >
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="2000"
+                    >₹2,000/night</span
+                  >
+                </label>
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="accommodation"
+                    value="standard"
+                    class="form-radio h-5 w-5"
+                  />
+                  <span class="flex-1 font-semibold"
+                    >Standard Hotel (4-Star)</span
+                  >
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="4500"
+                    >₹4,500/night</span
+                  >
+                </label>
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="accommodation"
+                    value="luxury"
+                    class="form-radio h-5 w-5"
+                  />
+                  <span class="flex-1 font-semibold"
+                    >Luxury Hotel (5-Star)</span
+                  >
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="10000"
+                    >₹10,000/night</span
+                  >
+                </label>
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="accommodation"
+                    value="heritage"
+                    class="form-radio h-5 w-5"
+                  />
+                  <span class="flex-1 font-semibold">Heritage Property</span>
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="15000"
+                    >₹15,000/night</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <!-- Meal Plan -->
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                🍽️ Meal Plan
+              </h2>
+              <div class="space-y-3">
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mealPlan"
+                    value="none"
+                    class="form-radio h-5 w-5"
+                    checked
+                  />
+                  <span class="flex-1 font-semibold"
+                    >No Meals (Explore on your own)</span
+                  >
+                  <span class="text-[#1a1a1a] font-bold">₹0</span>
+                </label>
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mealPlan"
+                    value="breakfast"
+                    class="form-radio h-5 w-5"
+                  />
+                  <span class="flex-1 font-semibold">Breakfast Only</span>
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="500"
+                    >₹500/day/person</span
+                  >
+                </label>
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mealPlan"
+                    value="halfboard"
+                    class="form-radio h-5 w-5"
+                  />
+                  <span class="flex-1 font-semibold"
+                    >Half Board (Breakfast + Dinner)</span
+                  >
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="1200"
+                    >₹1,200/day/person</span
+                  >
+                </label>
+                <label
+                  class="radio-item flex items-center gap-3 border-2 border-gray-300 rounded-lg p-4 cursor-pointer"
+                >
+                  <input
+                    type="radio"
+                    name="mealPlan"
+                    value="fullboard"
+                    class="form-radio h-5 w-5"
+                  />
+                  <span class="flex-1 font-semibold"
+                    >Full Board (All Meals)</span
+                  >
+                  <span class="text-[#1a1a1a] font-bold" data-base-price="2000"
+                    >₹2,000/day/person</span
+                  >
+                </label>
+              </div>
+            </div>
+
+            <!-- Activities (Multiple Choice) -->
+            <div class="mb-8">
+              <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                🎭 Optional Activities
+              </h2>
+              <p class="text-gray-600 mb-4 text-sm">
+                Select activities you'd like to add to your package
+              </p>
+              <div class="space-y-3" id="activitiesContainer">
+                <!-- Activities will be dynamically populated based on destination -->
+              </div>
+            </div>
+
+            <!-- Price Breakdown -->
+            <div class="bg-gray-50 rounded-xl p-6 mb-6">
+              <h3 class="text-xl font-bold text-gray-800 mb-4">
+                💰 Price Breakdown
+              </h3>
+              <div class="space-y-2 text-gray-700">
+                <div class="flex justify-between">
+                  <span>Travel Cost:</span>
+                  <span id="travelCost" class="font-semibold">₹0</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Accommodation Cost:</span>
+                  <span id="accommodationCost" class="font-semibold">₹0</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Meal Cost:</span>
+                  <span id="mealCost" class="font-semibold">₹0</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Activities Cost:</span>
+                  <span id="activitiesCost" class="font-semibold">₹0</span>
+                </div>
+                <div class="border-t-2 border-gray-300 pt-2 mt-2"></div>
+                <div class="flex justify-between text-lg">
+                  <span class="font-bold">Subtotal:</span>
+                  <span id="subtotal" class="font-bold text-[#1a1a1a]">₹0</span>
+                </div>
+                <div class="flex justify-between text-sm text-gray-600">
+                  <span>GST (5%):</span>
+                  <span id="gst">₹0</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Total Price -->
+            <div
+              class="bg-gradient-to-r from-yellow-500 to-pink-500 rounded-xl p-6 text-white"
+            >
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold">Total Price:</span>
+                <span id="totalPrice" class="text-4xl font-bold">₹0</span>
+              </div>
+              <p class="text-sm mt-2 opacity-90">
+                For <span id="totalTravelers">2</span> traveler(s) ×
+                <span id="totalDays">3</span> days
+              </p>
+            </div>
+
+            <button
+              id="confirmBookingBtn"
+              class="w-full mt-8 bg-yellow-600 text-white py-4 rounded-xl font-semibold text-lg hover:bg-yellow-700 transition transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled
+            >
+              Select a Destination to Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 4: Confirmation -->
+    <div id="page4" class="page">
+      <div
+        class="gradient-bg hero-pattern min-h-screen flex items-center justify-center p-4"
+      >
+        <div class="bg-white rounded-2xl shadow-2xl p-12 max-w-2xl text-center">
+          <div class="text-6xl mb-6">🎉</div>
+          <h1 class="text-5xl font-bold text-[#1a1a1a] mb-4">
+            Booking Confirmed!
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Your journey with VoyageFlow is all set!
+          </p>
+
+          <div class="bg-yellow-50 rounded-xl p-6 mb-8">
+            <h3 class="font-bold text-gray-800 mb-3 text-lg">
+              Your Trip Summary
+            </h3>
+            <div class="text-left space-y-2 text-gray-700">
+              <p>
+                <strong>Destination:</strong>
+                <span id="summaryDestination"></span>
+              </p>
+              <p>
+                <strong>Duration:</strong> <span id="summaryDuration"></span>
+              </p>
+              <p>
+                <strong>Travelers:</strong> <span id="summaryTravelers"></span>
+              </p>
+              <p>
+                <strong>Total Amount:</strong>
+                <span id="summaryTotal" class="text-[#1a1a1a] font-bold"></span>
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-green-50 rounded-xl p-4 mb-8">
+            <p class="text-gray-700 leading-relaxed">
+              Thank you for choosing VoyageFlow. Get ready for an incredible
+              Indian adventure!
+            </p>
+          </div>
+
+          <button
+            id="startOverBtn"
+            class="bg-yellow-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-yellow-700 transition transform hover:scale-105"
+          >
+            Plan Your Next Trip
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal" aria-hidden="true">
+      <div
+        class="modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="successTitle"
+      >
+        <div class="text-5xl mb-4">✅</div>
+        <h2 id="successTitle" class="text-2xl font-bold text-gray-800 mb-2">
+          Registration Successful!
+        </h2>
+        <p class="text-gray-600 mb-6">
+          Welcome to VoyageFlow. Let's explore amazing destinations!
+        </p>
+      </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
+        <div class="text-5xl mb-4">🎊</div>
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">Perfect Choice!</h2>
+        <p class="text-gray-600 mb-2">Your itinerary looks amazing!</p>
+        <p class="text-gray-500 text-sm mb-6">Preparing your confirmation...</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
